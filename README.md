@@ -5,7 +5,7 @@ A **Retrieval-Augmented Generation** chatbot that lets you upload your own docum
 ![Python](https://img.shields.io/badge/Python-3.10+-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-green)
 ![Gemini](https://img.shields.io/badge/Google_Gemini-2.0_Flash-orange)
-
+[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Visit_Portfolio-6c63ff?style=for-the-badge)](https://rag-chatbot-up84.onrender.com/)
 ---
 
 ## 📺 Demo
