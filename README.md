@@ -11,8 +11,9 @@ A **Retrieval-Augmented Generation** chatbot that lets you upload your own docum
 ## 📺 Demo
 
 <!-- Add your demo GIF or video link here -->
-> [!TIP]
-> You can record your screen and convert it to a GIF to showcase the interaction here!
+## Demo Video
+
+[![Demo Video](demo-thumbnail.png)](https://drive.google.com/file/d/1nKDd9E_p_SUS78idodrPa26oX1eubYiv/view?usp=sharing)
 
 ---
 
