@@ -1,0 +1,15 @@
+# Environment variables (contains API keys)
+.env
+
+# ChromaDB local database
+chroma_db/
+
+# Uploaded files
+uploads/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/

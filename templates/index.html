@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RAG Chatbot — Ask Your Documents</title>
+    <meta name="description" content="Upload your documents and chat with an AI that answers using your own knowledge base." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/style.css?v=1.1" />
+</head>
+<body>
+    <!-- ───── Sidebar ───── -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <span class="logo-icon">⚡</span>
+                <h1>RAG Chatbot</h1>
+            </div>
+            <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle sidebar">✕</button>
+        </div>
+
+        <!-- Upload Area -->
+        <div class="upload-section">
+            <h2>Upload Documents</h2>
+            <div class="dropzone" id="dropzone">
+                <div class="dropzone-content">
+                    <span class="dropzone-icon">📄</span>
+                    <p>Drag & drop files here</p>
+                    <span class="dropzone-hint">PDF, TXT, DOCX</span>
+                </div>
+                <input type="file" id="file-input" accept=".pdf,.txt,.docx" multiple hidden />
+            </div>
+            <button class="btn btn-upload" id="btn-browse">Browse Files</button>
+            <div class="upload-status" id="upload-status"></div>
+        </div>
+
+        <!-- Document List -->
+        <div class="doc-list-section">
+            <div class="doc-list-header">
+                <h2>Your Documents</h2>
+                <button class="btn btn-clear" id="btn-clear-all" aria-label="Clear all data" title="Delete all documents">Clear All</button>
+            </div>
+            <ul class="doc-list" id="doc-list">
+                <li class="doc-empty">No documents yet</li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- ───── Main Chat Area ───── -->
+    <main class="main" id="main">
+        <header class="topbar">
+            <div class="topbar-left">
+                <button class="sidebar-open-btn" id="sidebar-open" aria-label="Open sidebar">☰</button>
+                <span class="topbar-title">Chat</span>
+            </div>
+            <button class="btn btn-clear" id="btn-clear-chat" title="Clear chat history">Clear Chat</button>
+        </header>
+
+        <div class="chat-container" id="chat-container">
+            <!-- Welcome message -->
+            <div class="welcome" id="welcome">
+                <div class="welcome-icon">🤖</div>
+                <h2>Welcome to RAG Chatbot</h2>
+                <p>Upload your documents and ask questions. I'll answer using your knowledge base, or fall back to general knowledge if needed.</p>
+                <div class="welcome-chips">
+                    <button class="chip" data-q="What is this chatbot capable of?">What can you do?</button>
+                    <button class="chip" data-q="How do I upload a document?">How to upload?</button>
+                    <button class="chip" data-q="What is the capital of France?">General knowledge test</button>
+                </div>
+            </div>
+        </div>
+
+        <form class="input-bar" id="input-form">
+            <input type="text" id="query-input" placeholder="Ask a question…" autocomplete="off" />
+            <button type="submit" class="btn btn-send" id="btn-send">
+                <span class="send-icon">➤</span>
+            </button>
+        </form>
+    </main>
+
+    <script src="/static/script.js?v=1.1"></script>
+</body>
+</html>
